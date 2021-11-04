@@ -17,24 +17,24 @@ import itertools
 #PROCESSO INICIAL DE LOGIN EM PAG (SE NECESSÁRIO)!
 
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome() #neste caso se trata de uma automação com o chrome, mas é totalmente modular
 driver.get(url=#'url básica de acesso - topo do navegador')
-time.sleep(2)
+time.sleep(2) #time sleep é necessário para respeitar o tempo de carregamento das telas, alterável conforme projeto
 search = driver.find_element_by_id("user")
 search.send_keys(#'SEU USUÁRIO')
 search = driver.find_element_by_id("password")
 search.send_keys(#'SUA SENHA')
 
-time.sleep(2)
+time.sleep(2) #time sleep é necessário para respeitar o tempo de carregamento das telas, alterável conforme projeto
 search = driver.find_element_by_id("loginButton")
-time.sleep(1)
+time.sleep(1) #time sleep é necessário para respeitar o tempo de carregamento das telas, alterável conforme projeto
 pyautogui.press('enter')
 
 
 #TAKS básicas considerando busca através de janela suspensa de pesquisa
 
 
-time.sleep(2)
+time.sleep(2) 
 driver.get(#url direcional - comumente encontrada como generic dentro dos elements com div especifica)
 time.sleep(2)
 search = driver.find_element_by_id(#botão generico referente ao campo de busca).click()
@@ -57,5 +57,4 @@ time.sleep(2)
 
 pyautogui.alert("O Código foi finalizado!")
 
-
-#Bibliotca:https://pyautogui.readthedocs.io/en/latest/quickstart.html)
+#Bibliotca com mais recursos vc encontra no link a seguir:https://pyautogui.readthedocs.io/en/latest/quickstart.html)
